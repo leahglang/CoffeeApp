@@ -17,7 +17,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-
   void navigateBottomNavBar(int index) {
     setState(() {
       _selectedIndex = index;
@@ -101,6 +100,24 @@ class _HomePageState extends State<HomePage> {
                     child: ListTile(
                       leading: Icon(Icons.info),
                       title: Text('About'),
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AboutPage(),
+                      ),
+                    );
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 25),
+                    child: ListTile(
+                      leading: Icon(Icons.admin_panel_settings_rounded),
+                      title: Text('Manage Products'),
                     ),
                   ),
                 ),
