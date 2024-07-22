@@ -113,7 +113,4 @@ android {
 flutter {
     source = "../.."
 }
-// systemProp.http.proxyHost=your.proxy.host
-// systemProp.http.proxyPort=your.proxy.port
-// systemProp.https.proxyHost=your.proxy.host
-// systemProp.https.proxyPort=your.proxy.port
+
